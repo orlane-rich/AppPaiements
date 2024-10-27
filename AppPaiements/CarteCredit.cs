@@ -1,12 +1,13 @@
-﻿using System;
+﻿using AppPaiements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppPaiements
-{
-    internal class CarteCredit : Paiement
+
+       
+    internal class CarteCredit : Paiement 
     { //Proprietes
         public int NumeroCarte {  get; set; }
     // Constructeur
@@ -18,5 +19,6 @@ namespace AppPaiements
         {
             Console.WriteLine ($"Montant: {Montant}, Description: {Description}, NumeroCarte:{NumeroCarte}");
         }
-    }
+
+    
 }
