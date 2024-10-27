@@ -15,7 +15,7 @@ namespace AppPaiements
             Montant = montant;
             Description = description;
         }
-        public void AfficherDetails()
+        public virtual void AfficherDetails()
         {
             Console.WriteLine($"Montant : {Montant}, Description: {Description}");
         }
