@@ -20,7 +20,7 @@ namespace AppPaiements
 
         public override void AfficherDetails()
         {
-            Console.WriteLine($"Montant: {Montant}, Description: {Description}, Email: {Courriel}");
+            Console.WriteLine($"Infos Paypal - Montant: {Montant}, Description: {Description}, Email: {Courriel}");
         }
     }
 }

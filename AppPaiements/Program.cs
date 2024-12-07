@@ -11,23 +11,25 @@ internal class Program
         CarteCredit CarteCredit2 = new CarteCredit(1600, "Vetements", 4724);
         CarteCredit CarteCredit3 = new CarteCredit(250, "Groceries", 5052);
 
+        CarteCredit1.AfficherDetails();
+        CarteCredit2.AfficherDetails();
+        CarteCredit3.AfficherDetails();
+
         // Instances de la classe Paypal
         Paypal Paypal1 = new Paypal(700, "Loisir", "orlanesegolene@icloud.com");
         Paypal Paypal2 = new Paypal(250, "Transport", "orlaneketcha64@gmail.com");
 
-        // Créer une liste Paiements
-      List<Paiement> Paiements = new List<Paiement> { CarteCredit1, CarteCredit2, CarteCredit3, Paypal1, Paypal2};
+        Paypal1.AfficherDetails();
+        Paypal2.AfficherDetails();
 
-        // Parcourir la liste et afficher 
-        Console.WriteLine("Détails des paiements dans la liste :");
 
         Utilisateur utilisateur = new Utilisateur("Orlane Ketcha");
 
-        utilisateur.AjouterPaiement(paiement1);
-        utilisateur.AjouterPaiement(paiement2);
-        utilisateur.AjouterPaiement(paiement3);
-        utilisateur.AjouterPaiement(paiementPaypal1);
-        utilisateur.AjouterPaiement(paiementPaypal2);
+        utilisateur.AjouterPaiement(CarteCredit1);
+        utilisateur.AjouterPaiement(CarteCredit2);
+        utilisateur.AjouterPaiement(CarteCredit3);
+        utilisateur.AjouterPaiement(Paypal1);
+        utilisateur.AjouterPaiement(Paypal2);
 
 
         utilisateur.AfficherInfos();

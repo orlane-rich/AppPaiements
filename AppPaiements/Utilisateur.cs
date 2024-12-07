@@ -9,15 +9,28 @@ namespace AppPaiements
     internal class Utilisateur
     {
         public string Nom { get; set; }
-        public List<Paiement> Paiements { get; set; }
-        public Utilisateur(string nom, List<Paiement> paiements)
+        public List<Paiement> liste_paiements { get; set; }
+        public Utilisateur(string nom)
         {
             Nom = nom;
-            Paiements = paiements;
+            liste_paiements = new List<Paiement>();
         }
-        public virtual void AfficherDetails()
+        public void AjouterPaiement(Paiement paiement)
         {
-            Console.WriteLine($"Nom : {Nom}, Paiements: {Paiements}");
+            liste_paiements.Add(paiement);
+        }
+
+
+
+        public void AfficherInfos()
+        {
+            Console.WriteLine($"Utilisateur: {Nom}");
+            Console.WriteLine("Liste des paiements:");
+            foreach (var paiement in liste_paiements)
+            {
+                paiement.AfficherDetails();
+            }
         }
     }
+
 }
