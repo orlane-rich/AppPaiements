@@ -15,9 +15,9 @@ using System.Threading.Tasks;
         {
             NumeroCarte = numeroCarte;
         }
-        public void AfficherDetails() 
+        public override void AfficherDetails() 
         {
-            Console.WriteLine ($"Montant: {Montant}, Description: {Description}, NumeroCarte:{NumeroCarte}");
+            Console.WriteLine ($"Infos Carte de credit - Montant: {Montant}, Description: {Description}, NumeroCarte:{NumeroCarte}");
         }
 
     

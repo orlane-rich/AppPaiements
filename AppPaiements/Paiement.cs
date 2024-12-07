@@ -8,9 +8,9 @@ namespace AppPaiements
 {
     internal class Paiement
     {
-        public int Montant { get; set; }
+        public double Montant { get; set; }
         public string Description { get; set; }
-        public Paiement(int montant, string description)
+        public Paiement(double montant, string description)
         {
             Montant = montant;
             Description = description;
